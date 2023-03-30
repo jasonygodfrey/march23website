@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+
   <meta charset="UTF-8">
   <title>Jason Godfrey - Software Developer Engineer</title>
   <style>
@@ -32,6 +34,22 @@ body {
   font-weight: bold;
   color: rgb(207, 206, 206);
   text-shadow: -2px 0 rgb(16, 19, 15), 0 2px rgb(0, 0, 0), 2px 0 rgb(44, 46, 44), 0 -2px rgb(77, 80, 77);
+  background-image: url("codingphoto.jpeg");
+  animation: scrollBg 30s linear infinite;
+  filter: grayscale(-50%);
+  filter: hue-rotate(90deg);
+  filter: contrast(200%);
+}
+
+@keyframes scrollBg {
+  from {
+    background-position: 0 0;
+    filter: hue-rotate(-90deg);
+  }
+  to {
+    background-position: 100% 0;
+    filter: hue-rotate(90deg);
+  }
 }
 
 .subtitle {
@@ -56,12 +74,12 @@ body {
 
 .header-buttons button {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: lighter;
   background-color: transparent;
   border: none;
-  color: rgb(5, 5, 5);
+  color: rgba(5, 5, 5, 0.705);
   cursor: pointer;
-  font-family: 'Charles George Regular', sans-serif;
+  font-family: 'Charles George Regular', system-ui;
   padding: 5px 150px; /* Adjusted padding */
   width: 120px;
 }
@@ -71,10 +89,60 @@ body {
   top: 60px; /* Adjust as needed */
   left: 0;
   width: 100%;
-  height: 2px; /* Adjust the thickness */
-  background-color: rgb(5, 5, 5); /* Adjust the color */
+  height: 1px; /* Adjust the thickness */
+  background-color: rgb(41, 40, 40); /* Adjust the color */
 }
+.footer-icons {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    height: 60px;
+  }
 
+  .footer-icons a {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 30px;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .footer-icons a:hover {
+    transform: translateY(-5px);
+  }
+
+  .footer-icons i {
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+  }
+
+  .fab {
+    font-size: 90px;
+  }
+
+  .fa-github {
+    color: rgb(83, 77, 77);
+  }
+
+  .fa-linkedin {
+    
+    color: rgb(66, 61, 61);
+  
+  }
+
+  .fa-discord {
+    color: rgb(73, 67, 67);
+  }
+  
+</style>
 
 
   </style>
@@ -82,15 +150,22 @@ body {
 
 <body>
   <div id="container">
-    <div class="text">Jason Godfrey</div>
-    <div class="subtitle">Software Developer Engineer ⊂(◉‿◉)つ</div>
+    <div class="text">
+      <span style="pointer-events: none;">Jason Godfrey</span>
+    </div>
+    <div class="subtitle"><span style="pointer-events: none;">Software Developer Engineer ⊂(◉‿◉)つ</span></div>
     
       <div class="header-buttons">
        
-        <button>Projects</button>
-        <button>About_Me</button>
+        <button>>Projects</button>
+        <button>>About_Me</button>
       </div>
       <div class="section-divider"></div>
+    </div>
+    <div class="footer-icons">
+      <a href="https://github.com/your-username"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/your-username"><i class="fab fa-linkedin"></i></a>
+      <a href="https://discord.gg/your-discord-server"><i class="fab fa-discord"></i></a>
     </div>
 </body>
 </html>
