@@ -89,10 +89,12 @@ body {
 .header-buttons {
   position: absolute;
   top: 20px;
-  right: 180px;
+  left: 50%; /* Added this line to center the buttons horizontally */
   display: flex;
   flex-direction: row;
+  transform: translateX(-50%); /* Updated the transform property */
 }
+
 
 .header-buttons button {
   font-size: 20px;
@@ -102,9 +104,11 @@ body {
   color: rgba(5, 5, 5, 0.705);
   cursor: pointer;
   font-family: 'Charles George Regular', system-ui;
-  padding: 5px 150px; /* Adjusted padding */
-  width: 120px;
+  padding: 5px 10px; /* Adjusted padding */
+  min-width: 60px; /* Changed width to min-width */
+  
 }
+
 
 .section-divider {
   position: absolute;
@@ -164,6 +168,32 @@ body {
     color: rgb(73, 67, 67);
   }
   
+  @keyframes glitch {
+  0%, 100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0);
+  }
+  10%, 90% {
+    clip-path: inset(0 0 100% 0);
+    transform: translate(-2px);
+  }
+  20%, 80% {
+    clip-path: inset(0 100% 0 0);
+    transform: translate(2px);
+  }
+  30%, 70% {
+    clip-path: inset(100% 0 0 0);
+    transform: translate(-2px);
+  }
+  40%, 60% {
+    clip-path: inset(0 0 0 100%);
+    transform: translate(2px);
+  }
+  50% {
+    clip-path: inset(0 0 100% 0);
+    transform: translate(-2px);
+  }
+}
 
 
 </style>
@@ -190,11 +220,14 @@ body {
       <div class="section-divider"></div>
     </div>
     <div class="footer-icons">
-      <a href="https://github.com/your-username"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/your-username"><i class="fab fa-linkedin"></i></a>
-      <a href="https://discord.gg/your-discord-server"><i class="fab fa-discord"></i></a>
+      <a href="https://github.com/jasonygodfrey"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/jasong7/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://discord.gg/Ny68sbRR"><i class="fab fa-discord"></i></a>
     </div>
 </body>
+<!-- Add this line in your HTML file -->
+<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+
 </html>
 <!-- partial:index.partial.html -->
 <div id="container"></div>
