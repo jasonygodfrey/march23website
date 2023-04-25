@@ -195,6 +195,54 @@ body {
   }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg) rotateZ(360deg);
+  }
+}
+
+
+
+.spinning-image {
+  animation: spin 15s linear infinite;
+
+  /* Positioning */
+  position: fixed; /* or 'absolute' if you want the image to be positioned relative to the closest positioned ancestor */
+  left: 50%; /* Replace with the desired distance from the left edge of the viewport or the positioned ancestor */
+  top: -70%; /* Replace with the desired distance from the top edge of the viewport or the positioned ancestor */
+  z-index: 999; /* Ensures the image appears above other elements */
+}
+.spinning-image:hover {
+  filter: invert();
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate3d(0, 1, 0, 360deg) rotateZ(360deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg) rotateZ(0deg);
+  }
+}
+
+
+
+.spinning-image2 {
+  animation: spin2 15s linear infinite;
+
+  /* Positioning */
+  position: fixed; /* or 'absolute' if you want the image to be positioned relative to the closest positioned ancestor */
+  left: 0%; /* Replace with the desired distance from the left edge of the viewport or the positioned ancestor */
+  top: -70%; /* Replace with the desired distance from the top edge of the viewport or the positioned ancestor */
+  z-index: 999; /* Ensures the image appears above other elements */
+}
+.spinning-image2:hover {
+  filter: invert();
+}
+
 
 </style>
 
@@ -238,7 +286,25 @@ viewBox="0 0 24 24">
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACYklEQVR4nO3YS4hOYRzH8Y97uSxYKMpGDMo1C5LLQmQ2ysZCkhLKpUwWFhaKmlwXsiCKiEgpwsI1ZTeUlIWSkTSKTMNGMyYzeup56/TyXuc977ym861/nfec533O/3ee5385h4yMjIyMjIxU6C9i/xX9Q01IkkzIUFiRSZhQQ7/+cmYgVi5z8R2dWPO/ChmOV4n/9KI5DSG1OleI9f94AF2YMQDfB0XIhQKreW8Avg+KkOdFtuZsjMe4Sp2uh+XzosjYX4njj7iCVY0q5EEVc1wqJaTe5wLHqhDSoQGFLKxCyIFGETIRi7APbyoU8QSjwiTn0VfnuKiV3UxmsI4GcKgS+4k7WJu/jXoSgxp1ZXqwDjMxJvo9LF9IVxz8A5sKrFBffAptJW7YHud4VOB6mOcaduJLibnu4lk8DtU+SSiMNzAyefIpzmFW/D06Fpnt2BW7z6nx2gisRAuORjuErZgfG74cC7AHx9EanU/2SyFAl2AHDse5WrE3Bn6OptienI0FMFkww4PdjMlh4O0G2DrF7KAyaWkAZwvZ61xqLYemAQT5MpxJSUQvFquQhxXcIATpu3i8HCtSErJbFSzF5RhI7/ENn/AWj2My2JYI6JAtPqe4pU6pA2OxAd0pibiel/2qIuTn6fELxjTMi9snrMaJmNfTEhDsZC1E5N6Xf6foaLEXplCzasqWmDHqJaItxl4qhL7ma8oCQkLZH7uFVJmCqyk0ku2xDSn7A0KtCH3Pxdg+V+v8B5zG6nqsQDlptzk2gfdjjemMLXZ33IqhBr3ELRzBRswpOXNGRkZGRobB5Q/+/zDKNIKZ1wAAAABJRU5ErkJggg==">
       <img src="data:image/png;base64,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">
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACW0lEQVR4nNWav2sUQRTHP1hoY7ibCIoIFhbBMqRIqZ3YKtqJncbCSAIGUigiKliL2mmh/4EQ/wAFgxfiiSQgWEi6QIqgtpqVgbfwPHLr/ngzu/OFB3e3O2/f575vZ/b2FsLqBLAJvAccieoQ8BHIJIbAERLUAwWRx3pqzhwFfu4DkpwzD8dAJOfM1/+AdBbGAXPy+lQJiE7COCnotrw/XwGkMzBOCsmUI3MVQVqH6QMDVcwd+fxyDZDWZrP+CISPF7JtpiZIdBjdTjo+yPaDwG4DmPUYbbafE3n8AY7Lfq8bgGShnRnnhI4bsu+ZhiBZKGeKnNDxBTggY1YMYIaWzpRxQsdVGTcF/OiKM64ihI8tcdDrArDXNoyrAZHHimqxW23CuAYQeTxW+VqBcQYQmRQ+q/LOx4Tpl5ydykD4wkd13QhmWDSbhYaIAjNh2E5FELluGrbZhE78PCKENcwznXTHAMLPTFVl0WY7OuG2wTezXANkweC42zrhU4OEPhYjQ2TAE530MLAWEcYKYk1q/0e9kVucodrMCuITMDnuIKFhokDohdGqzXzhuWYN26lPSYWCeRQTIiSMv7R/ExMilzOC8YveRXUefq84ftAEwhrG/81wWnJeiQ1hDfNWtdjn2BDWMGdL3iMehICwXGdeSa5jwO+Cy/NJAqupM7tyW9VrNbYT1s5MS56XbThhCXNJctxtG6Jpm/kfVPqEj9pOljDnZOxSVyDqwpyUcde6BFEVZoME5ErA3CcR9Qpms1+yECYjN8aZeySo3ogzq/LoU5JywDvgmzyEFkx/AYAeUvlnrpXmAAAAAElFTkSuQmCC">
+
+
+      <br>
+      <a href="/webdesign">
+      <img src="webdesign2.png" alt="Web Design 2" width="300" height="200" class="spinning-image">
+    </a>
+
+    <a href="/gamdev">
+      <img src="gamedev.png" alt="Web Design 2" width="300" height="200" class="spinning-image2">
+    </a>
+
     </div>
+    
+
+
+
+
+
+    
     
       <div class="header-buttons">
        
