@@ -1,36 +1,36 @@
 body {
   background-color: black;
   color: white;
-  position: relative;
-  margin: 0;
-  height: 100vh;
+  position: relative;  /* This makes the position of the child elements relative to the body */
+  margin: 0; /* This is to ensure the body takes the full width and height */
+  height: 100vh; /* This is to ensure the body takes the full viewport height */
 }
 
 /* ===== Scrollbar CSS ===== */
-/* Firefox */
-* {
-  scrollbar-width: auto;
-  scrollbar-color: #000000 #000000;
-}
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #000000 #000000;
+  }
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 14px;
-}
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 14px;
+  }
 
-*::-webkit-scrollbar-track {
-  background: #000000;
-}
+  *::-webkit-scrollbar-track {
+    background: #000000;
+  }
 
-*::-webkit-scrollbar-thumb {
-  background-color: #000000;
-  border-radius: 10px;
-  border: 3px solid #ffffff;
-}
+  *::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
 
-* {
-  cursor: url('https://i.imgur.com/6wmyrkK.gif'), auto;
-}
+  * {
+    cursor: url('https://i.imgur.com/6wmyrkK.gif'),auto;
+  }
 
 @keyframes spin {
   from {
@@ -42,18 +42,19 @@ body {
 }
 
 #jasongodfreyicon {
-  position: fixed;
-  top: 0;
+  position: fixed; /* Use 'fixed' instead of 'absolute' */
+  top: 0; /* Position at the top of the page */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Center horizontally */
   width: 150px;
   animation: spin 4s linear infinite;
   transition: 0.3s all;
 }
 
 #jasongodfreyicon:hover {
-  filter: invert(1);
+  filter: invert(1); /* this will change the color to the opposite on hover, i.e., white becomes black and vice versa */
 }
+
 
 .portfolio-grid {
   display: grid;
@@ -63,31 +64,10 @@ body {
   margin-top: 150px;
 }
 
+
 .portfolio-grid img {
-  width: 100%;
+  width: 100%; /* This makes the images fill their grid cell */
   height: auto;
-  position: relative;
-}
-
-.portfolio-grid img::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(0, 0, 0, 0) 20%,
-    rgba(0, 0, 0, 0.4) 70%
-  );
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.portfolio-grid img:hover::before {
-  opacity: 1;
 }
 
 /* This media query changes the grid to a single column on screens smaller than 600px */
