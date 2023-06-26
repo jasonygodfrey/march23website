@@ -42,12 +42,13 @@ body {
 }
 
 #jasongodfreyicon {
-  position: absolute;
-  top: 20px;
+  position: fixed; /* Use 'fixed' instead of 'absolute' */
+  top: 0; /* Position at the top of the page */
   left: 50%;
-  width: 100px;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 150px;
   animation: spin 4s linear infinite;
-  transition: 0.3s all; /* this will animate the color change */
+  transition: 0.3s all;
 }
 
 #jasongodfreyicon:hover {
@@ -57,11 +58,12 @@ body {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* This will create a responsive grid that adjusts the number of columns based on the viewport size */
-  grid-gap: 10px; /* This sets the gap between grid items */
-  padding: 20px; /* This sets the padding around the whole grid */
-  margin-top: 150px; /* You may need to adjust this to position the grid below your icon */
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+  margin-top: 150px;
 }
+
 
 .portfolio-grid img {
   width: 100%; /* This makes the images fill their grid cell */
