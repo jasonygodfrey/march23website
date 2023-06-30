@@ -18,20 +18,16 @@ canvas {
 }
 
 /* Styles for mobile devices (up to 600px width) */
-/* Styles for mobile devices (up to 600px width) */
 @media (max-width: 600px) {
   .wrapper {
     opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
   #particles-js {
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 99999;
   }
   
   .reflection {
