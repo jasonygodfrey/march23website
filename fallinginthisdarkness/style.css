@@ -64,6 +64,7 @@ User
   -webkit-animation: rotate infinite;
   animation-duration:500s;
   animation-delay:0s;
+  z-index: 5;
 }
 
 @keyframes rotate {
