@@ -1,10 +1,4 @@
-body {
-  background-color: black;
-  color: white;
-  position: relative;  /* This makes the position of the child elements relative to the body */
-  margin: 0; /* This is to ensure the body takes the full width and height */
-  height: 100vh; /* This is to ensure the body takes the full viewport height */
-}
+
 
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
