@@ -6,7 +6,6 @@ body {
   height: 100vh; /* This is to ensure the body takes the full viewport height */
   margin: 0;
   padding: 0;
-  overflow: hidden;
   color: #eee;
   font: caption;
 }
@@ -136,6 +135,13 @@ nav ul.nav-links a.active-link {
   border-radius: 10px;  /* Optional: rounds the corners of the background */
   animation: fadeIn 2s;  /* Fade in animation */
   top: 150px; /* Position it below the icon */
+}
+
+/* This will apply when the screen width is less than 600px */
+@media (max-width: 600px) {
+  .aboutparagraph {
+    font-size: 18px;  /* Adjust the font size as needed */
+  }
 }
 
 @keyframes fadeIn {
