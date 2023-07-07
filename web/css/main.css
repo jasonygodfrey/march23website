@@ -49,6 +49,7 @@ body {
   width: 150px;
   animation: spin 4s linear infinite;
   transition: 0.3s all;
+  z-index: 3;
 }
 
 #jasongodfreyicon:hover {
@@ -62,6 +63,8 @@ body {
   grid-gap: 10px;
   padding: 20px;
   margin-top: 150px;
+  z-index: 2; /* Higher z-index */
+  position: relative; /* Set the position to relative or absolute for z-index to work */
 }
 
 
