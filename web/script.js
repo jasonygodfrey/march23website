@@ -22,9 +22,9 @@ void main(void) {
     gl_Position = vec4(position, 0., 1.);
 }
 `
-const fragmentSource = `#
+const fragmentSource = `#version 300 es
 /*********
-* 
+* made by
 */
 
 #ifdef GL_FRAGMENT_PRECISION_HIGH
