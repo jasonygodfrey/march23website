@@ -46,7 +46,7 @@ out vec4 fragColor;
 #define mouse (touch/resolution)
 #define rot(a) mat2(cos(a),-sin(a),sin(a),cos(a))
 #define noise(p) (.5+.5*sin(p.x*1.5)*sin(p.y*1.5))
-#define tint vec3(1,0,0)
+#define tint vec3(0,0,0)
 
 
 float rnd(vec2 p) {
