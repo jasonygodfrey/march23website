@@ -1,5 +1,5 @@
 /*********
- * made by Matthias Hurrle (@atzedent)
+ * 
  */
 
 /** @type {HTMLCanvasElement} */
@@ -22,9 +22,9 @@ void main(void) {
     gl_Position = vec4(position, 0., 1.);
 }
 `
-const fragmentSource = `#version 300 es
+const fragmentSource = `#
 /*********
-* made by Matthias Hurrle (@atzedent)
+* 
 */
 
 #ifdef GL_FRAGMENT_PRECISION_HIGH
@@ -46,7 +46,8 @@ out vec4 fragColor;
 #define mouse (touch/resolution)
 #define rot(a) mat2(cos(a),-sin(a),sin(a),cos(a))
 #define noise(p) (.5+.5*sin(p.x*1.5)*sin(p.y*1.5))
-#define tint vec3(1,3,2)
+#define tint vec3(1,0,0)
+
 
 float rnd(vec2 p) {
   return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453123);
