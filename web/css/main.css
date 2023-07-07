@@ -28,9 +28,6 @@ body {
     border: 3px solid #ffffff;
   }
 
-  * {
-    cursor: url('https://i.imgur.com/6wmyrkK.gif'),auto;
-  }
 
 @keyframes spin {
   from {

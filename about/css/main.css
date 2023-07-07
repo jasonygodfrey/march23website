@@ -4,6 +4,11 @@ body {
   position: relative;  /* This makes the position of the child elements relative to the body */
   margin: 0; /* This is to ensure the body takes the full width and height */
   height: 100vh; /* This is to ensure the body takes the full viewport height */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #eee;
+  font: caption;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -28,9 +33,7 @@ body {
     border: 3px solid #ffffff;
   }
 
-  * {
-    cursor: url('https://i.imgur.com/6wmyrkK.gif'),auto;
-  }
+
 
 @keyframes spin {
   from {
@@ -110,3 +113,11 @@ nav ul.nav-links a.active-link {
   color: #15fc00;  /* Change this to the color you want for the active link */
 }
 
+#game {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* This will put the game behind your other content */
+}
