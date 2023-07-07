@@ -130,19 +130,14 @@ nav ul.nav-links a.active-link {
   max-width: 800px;  /* Set a max width */
   margin: 0 auto;  /* Center it horizontally */
   box-sizing: border-box;  /* Ensures padding is included in width */
-  font-size: 18px;  /* Set font size */
+  font-size: 14px;  /* Set font size */
   line-height: 1.6;  /* Set line height */
   border-radius: 10px;  /* Optional: rounds the corners of the background */
   animation: fadeIn 2s;  /* Fade in animation */
   top: 150px; /* Position it below the icon */
 }
 
-/* This will apply when the screen width is less than 600px */
-@media (max-width: 900px) {
-  .aboutparagraph {
-    font-size: 14px;  /* Adjust the font size as needed */
-  }
-}
+
 
 @keyframes fadeIn {
   from {
