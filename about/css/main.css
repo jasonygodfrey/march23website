@@ -138,9 +138,9 @@ nav ul.nav-links a.active-link {
 }
 
 /* This will apply when the screen width is less than 600px */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .aboutparagraph {
-    font-size: 18px;  /* Adjust the font size as needed */
+    font-size: 14px;  /* Adjust the font size as needed */
   }
 }
 
