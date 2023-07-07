@@ -121,3 +121,28 @@ nav ul.nav-links a.active-link {
   height: 100%;
   z-index: -1; /* This will put the game behind your other content */
 }
+
+.aboutparagraph {
+  position: relative;  /* Ensures the z-index property is respected */
+  z-index: 10;  /* Places it above the background */
+  padding: 2rem;  /* Adds some space around the text */
+  background: rgba(0, 0, 0, 0.6);  /* Semi-transparent background */
+  color: #fff;  /* Text color */
+  max-width: 800px;  /* Set a max width */
+  margin: 0 auto;  /* Center it horizontally */
+  box-sizing: border-box;  /* Ensures padding is included in width */
+  font-size: 18px;  /* Set font size */
+  line-height: 1.6;  /* Set line height */
+  border-radius: 10px;  /* Optional: rounds the corners of the background */
+  animation: fadeIn 2s;  /* Fade in animation */
+  top: 150px; /* Position it below the icon */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
