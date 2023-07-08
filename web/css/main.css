@@ -53,6 +53,24 @@ body {
   filter: invert(1); /* this will change the color to the opposite on hover, i.e., white becomes black and vice versa */
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 .portfolio-grid {
   display: grid;
@@ -60,8 +78,30 @@ body {
   grid-gap: 10px;
   padding: 20px;
   margin-top: 150px;
-  z-index: 2; /* Higher z-index */
-  position: relative; /* Set the position to relative or absolute for z-index to work */
+  z-index: 2;
+  position: relative;
+  
+  /* Add these lines */
+  animation: fadeIn 2s; /* Change '2s' to the duration you want for the fade in */
+}
+.portfolio-grid a {
+  opacity: 0;
+}
+
+.portfolio-grid a:nth-child(4n+1) {
+  animation: fadeInMove 1s forwards;
+}
+
+.portfolio-grid a:nth-child(4n+2) {
+  animation: fadeInMove 1s forwards .2s;
+}
+
+.portfolio-grid a:nth-child(4n+3) {
+  animation: fadeInMove 1s forwards .4s;
+}
+
+.portfolio-grid a:nth-child(4n+4) {
+  animation: fadeInMove 1s forwards .6s;
 }
 
 
