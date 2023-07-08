@@ -86,11 +86,15 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: center;
   padding: 20px 30px;
   background-color: black;
+  z-index: 1000; /* This makes sure the header is always on top of other elements */
 }
+
 
 nav ul.nav-links {
   list-style: none;
